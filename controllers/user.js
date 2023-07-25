@@ -10,6 +10,6 @@ export const getUsers = async (req, res) => {
       const tours = await user.find();
       res.json(tours);
     } catch (error) {
-      res.status(404).json({ message: "Something went wrong" });
+      res.status(404).json({ message: "Something went " });
     }
   };
