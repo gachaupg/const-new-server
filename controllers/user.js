@@ -7,7 +7,7 @@ export const getUsers = async (req,res)=>{
         // res.status(200).json(tours);
     
         const tours = await user.find();
-        res.json(tours);
+        res.status(200).json(tours);
       } catch (error) {
         res.status(404).json({ message: "Something went wrong" });
       }
