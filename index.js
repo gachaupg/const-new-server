@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import morgan from 'morgan'
 import userRouter from './routes/users.js'
+import productRouter from './routes/product.js'
 
 const corsOptions ={
     origin:'*', 
@@ -24,7 +25,8 @@ const corsOptions ={
   app.get('/',(req,res)=>{
       res.send('hello');
   })
-app.use('/users', userRouter)
+  app.use('/users', userRouter)
+  app.use('/products', productRouter)
 
   const port = process.env.PORT || 5000;
 const uri =process.env.DB_URI
