@@ -29,10 +29,8 @@ const corsOptions ={
   app.use('/products', productRouter)
 
   const port = process.env.PORT || 5000;
-const uri =process.env.DB_URI
-app.listen(port, () => {
-  console.log(`Server running on port: ${port}...`);
-});
+
+
 
 mongoose
   .connect(process.env.DB_URI)
